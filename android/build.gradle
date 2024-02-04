@@ -1,0 +1,61 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+
+apply plugin: 'com.android.application'
+
+  def keystoreProperties = new Properties()
+   def keystorePropertiesFile = rootProject.file('key.properties')
+   if (keystorePropertiesFile.exists()) {
+       println "keystorePropertiesFile exists"
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+       println "keystoreProperties loaded"
+   } else {
+       println "keystorePropertiesFile does not exist"
+   }
+android {
+    compileSdkVersion 34 
+    namespace 'com.example.hova_ai'
+
+    defaultConfig {
+        applicationId "com.Dera.myapp"
+        minSdkVersion 16 
+        targetSdkVersion 34 
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['Dera']
+            keyPassword keystoreProperties['000000']
+            storeFile keystoreProperties['keys/Dera.jks'] ?: null
+            storePassword keystoreProperties['000000']
+            }
+    }
+    
+    buildTypes {
+       release {
+           signingConfig signingConfigs.release
+       }
+   }
+}
