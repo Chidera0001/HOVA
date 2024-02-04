@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332425647974",
+    "project_id": "hova-4d9e9",
+    "storage_bucket": "hova-4d9e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332425647974:android:b02ac72300560643d99aa7",
+        "android_client_info": {
+          "package_name": "com.example.hova_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLIztrXanG38rFbPvKUbiV2JP5_8P4muo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
