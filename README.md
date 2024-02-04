@@ -25,9 +25,10 @@ flutter run
 Ensure you have Flutter and Dart installed on your system.
 
 Implementation Details:
-The responsive screen was implemented using Flutter, focusing on an effective project structure and widget hierarchy. Key decisions include:
-Widget Choices: Utilized Flutter's responsive widgets such as LayoutBuilder and MediaQuery to ensure adaptability across different devices.
-State Management: Employed Provider for efficient state management, enhancing the app's scalability.
+*Effectiveness: I connected the two pages of the mobile app (cNew transaction & Confirm transaction)
+*The responsive screen was implemented using Flutter, focusing on an effective project structure and widget hierarchy. Key decisions include:
+*Widget Choices: Utilized Flutter's responsive widgets such as LayoutBuilder and MediaQuery to ensure adaptability across different devices.
+*State Management: Employed Provider for efficient state management, enhancing the app's scalability.
 
 API Integration:
 The app seamlessly integrates a mock JSON REST API response from MockAPI. This demonstrates proficiency in handling data within a Flutter application. A snippet of the integration is shown below
